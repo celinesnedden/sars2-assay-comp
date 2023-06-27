@@ -8,17 +8,17 @@ Celine Snedden(1), James Lloyd-Smith(1, 2)
 
 ## Repository information
 
-This repository provides the data and code to reproduce the analyses presented in the associated paper (_preprint and manuscript are in preparation_). Additional analyses mentioned but not shown in display elements of that paper are also included. 
+This repository provides the data and code to reproduce the analyses presented in the associated paper (_preprint is awaiting doi generation from bioRxiv_). Additional analyses mentioned but not shown in display elements of that paper are also included. 
 
 Instructions to recreate all analyses are summarized below, including explanations of adapting the hurdle model framework to your own data. 
 
 ## Article abstract
 
-Researchers and clinicians often rely on molecular assays like PCR to identify and monitor viral infections instead of the resource-prohibitive gold standard of viral culture. However, it remains unclear when (if ever) PCR measurements of viral load are reliable indicators of replicating or infectious virus. Here, we compare total RNA, subgenomic RNA, and viral culture results from 24 studies of SARS-CoV-2 in non-human primates using bespoke statistical models. Our best models predict subgenomic RNA from total RNA with 92% accuracy, and they predict culture positivity with 85% accuracy. Total RNA and subgenomic RNA showed equivalent performance as predictors of culture positivity. Multiple cofactors, including exposure conditions and host traits, influence culture predictions for total RNA quantities spanning twelve orders of magnitude. Our model framework can be adapted to compare any assays, in any host species, and for any virus, to support laboratory analyses, medical decisions, and public health guidelines. 
+Researchers and clinicians often rely on molecular assays like PCR to identify and monitor viral infections instead of the resource-prohibitive gold standard of viral culture. However, it remains unclear when (if ever) PCR measurements of viral load are reliable indicators of replicating or infectious virus. Here, we compare total RNA, subgenomic RNA, and viral culture results from 24 studies of SARS-CoV-2 in non-human primates using bespoke statistical models. On out-of-sample data, our best models predict subgenomic RNA from total RNA with 91% accuracy, and they predict culture positivity with 85% accuracy. Total RNA and subgenomic RNA showed equivalent performance as predictors of culture positivity. Multiple cofactors, including exposure conditions and host traits, influence culture predictions for total RNA quantities spanning twelve orders of magnitude. Our model framework can be adapted to compare any assays, in any host species, and for any virus, to support laboratory analyses, medical decisions, and public health guidelines. 
 
 ## Citation information
 
-If you use any of the code or data associated with this manuscript, please cite our work. (_Citation information to come once preprint is posted_). 
+If you use any of the code or data associated with this manuscript, please cite our work. (_Citation information to come once preprint doi is generated_). 
 
 ## File structure and naming conventions
 
