@@ -5,10 +5,12 @@ Celine Snedden(1), James Lloyd-Smith(1, 2)
 1. Department of Ecology and Evolutionary Biology, University of California, Los Angeles, Los Angeles, CA, USA
 2. Department of Computational Medicine, University of California, Los Angeles, Los Angeles, CA, USA
 
+The preprint is available at: https://doi.org/10.1101/2023.06.23.546114
+
 
 ## Repository information
 
-This repository provides the data and code to reproduce the analyses presented in the associated paper (_preprint is awaiting doi generation from bioRxiv_). Additional analyses mentioned but not shown in display elements of that paper are also included. 
+This repository provides the data and code to reproduce the analyses presented in the associated paper. Additional analyses mentioned but not shown in display elements of that paper are also included. 
 
 Instructions to recreate all analyses are summarized below, including explanations of adapting the hurdle model framework to your own data. 
 
@@ -18,7 +20,7 @@ Researchers and clinicians often rely on molecular assays like PCR to identify a
 
 ## Citation information
 
-If you use any of the code or data associated with this manuscript, please cite our work. (_Citation information to come once preprint doi is generated_). 
+If you use any of the code or data associated with this manuscript, please cite our work. (_Citation information to come_). 
 
 ## File structure and naming conventions
 
