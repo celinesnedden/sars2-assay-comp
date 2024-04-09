@@ -19,8 +19,11 @@ Researchers and clinicians often rely on molecular assays like PCR to identify a
 
 ## Citation information
 
-
 If you use any of the code or data associated with this manuscript, please cite our work. (_Citation information to come_). 
+
+Note that this work was posted as a preprint before publication (https://doi.org/10.1101/2023.06.23.546114).
+
+
 
 ## File structure and naming conventions
 
