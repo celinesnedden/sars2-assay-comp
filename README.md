@@ -1,4 +1,4 @@
-# PCR data accurately predict infectious virus: a characterization of SARS-CoV-2 in non-human primates
+# PCR data accurately predict infectious virus: a meta-analysis of SARS-CoV-2 in non-human primates
 
 Celine Snedden(1), James Lloyd-Smith(1, 2)
 
@@ -8,39 +8,38 @@ Celine Snedden(1), James Lloyd-Smith(1, 2)
 
 ## Repository information
 
-This repository provides the data and code to reproduce the analyses presented in the associated paper (_preprint is awaiting doi generation from bioRxiv_). Additional analyses mentioned but not shown in display elements of that paper are also included. 
+This repository provides the data and code to reproduce the analyses presented in the associated paper (Snedden and Lloyd-Smith 2024; _PLOS Pathogens_). Additional analyses mentioned but not shown in display elements of that paper are also included. 
 
 Instructions to recreate all analyses are summarized below, including explanations of adapting the hurdle model framework to your own data. 
 
+
 ## Article abstract
 
-Researchers and clinicians often rely on molecular assays like PCR to identify and monitor viral infections instead of the resource-prohibitive gold standard of viral culture. However, it remains unclear when (if ever) PCR measurements of viral load are reliable indicators of replicating or infectious virus. Here, we compare total RNA, subgenomic RNA, and viral culture results from 24 studies of SARS-CoV-2 in non-human primates using bespoke statistical models. On out-of-sample data, our best models predict subgenomic RNA from total RNA with 91% accuracy, and they predict culture positivity with 85% accuracy. Total RNA and subgenomic RNA showed equivalent performance as predictors of culture positivity. Multiple cofactors, including exposure conditions and host traits, influence culture predictions for total RNA quantities spanning twelve orders of magnitude. Our model framework can be adapted to compare any assays, in any host species, and for any virus, to support laboratory analyses, medical decisions, and public health guidelines. 
+Researchers and clinicians often rely on molecular assays like PCR to identify and monitor viral infections, instead of the resource-prohibitive gold standard of viral culture. However, it remains unclear when (if ever) PCR measurements of viral load are reliable indicators of replicating or infectious virus. The recent popularity of PCR protocols targeting subgenomic RNA for SARS-CoV-2 has caused further confusion, as the relationships between subgenomic RNA and standard total RNA assays are incompletely characterized and opinions differ on which RNA type better predicts culture outcomes. Here, we explore these issues by comparing total RNA, subgenomic RNA, and viral culture results from 24 studies of SARS-CoV-2 in non-human primates (including 2167 samples from 174 individuals) using custom-developed Bayesian statistical models. On out-of-sample data, our best models predict subgenomic RNA positivity from total RNA data with 91% accuracy, and they predict culture positivity with 85% accuracy. Further analyses of individual time series indicate that many apparent prediction errors may arise from issues with assay sensitivity or sample processing, suggesting true accuracy may be higher than these estimates. Total RNA and subgenomic RNA showed equivalent performance as predictors of culture positivity. Multiple cofactors (including exposure conditions, host traits, and assay protocols) influence culture predictions, yielding insights into biological and methodological sources of variation in assay outcomes – and indicating that no single threshold value applies across study designs. We also show that our model can accurately predict when an individual is no longer infectious, illustrating the potential for future models trained on human data to guide clinical decisions on case isolation. Our work shows that meta-analysis of in vivo data can overcome longstanding challenges arising from limited sample sizes and can yield robust insights beyond those attainable from individual studies. Our analytical pipeline offers a framework to develop similar predictive tools in other virus-host systems, including models trained on human data, which could support laboratory analyses, medical decisions, and public health guidelines. 
 
 ## Citation information
 
-If you use any of the code or data associated with this manuscript, please cite our work. (_Citation information to come once preprint doi is generated_). 
+
+If you use any of the code or data associated with this manuscript, please cite our work. (_Citation information to come_). 
 
 ## File structure and naming conventions
 
 All content is organized into the following folders:
 
 - `code`: contains all code, including processing data, model definitions, model selection, final model fitting, and figure and table generation. 
-  - primary analyses are ordered by increasing numbers (e.g., `01-prep-clean-data.R`, `02-PCR-model-selection.R`) representing the sequence in which they were run for the investigations presented in the paper.
-  - unless otherwise specified, each file should run without needing to run any other files prior
-  - files that generate certain figures or tables are preceded with `fig` or `tbl` and the corresponding number from the paper (if presented).
+  - primary analyses are ordered by increasing numbers (e.g., `01-prep-clean-data.R`, `02-sgRNA-model-selection.R`) representing the sequence in which they were run for the investigations presented in the paper.
+  - unless otherwise specified, each file should run without needing to run any other files prior 
+  - files that generate certain figures or tables are preceded with `fig` or `tbl` and the corresponding number from the paper (if included).
 
 - `data`: contains data as `.csv` files, including raw data (`raw_data.csv`) and cleaned data (`clean-data.csv`). 
-  - additional data files (`pred-sg-data.csv`, `pred-culture-data.csv`) are based on the cleaned data but contain additional columns with predictions generated by the final (best) sgRNA and culture models for each relevant sample.
+  - additional data files (`pred-sg-data.csv`, `pred-culture-data.csv`) are based on the cleaned data but contain additional columns with predictions generated by the final (best) sgRNA and culture models for each relevant sample or by the simple culture model (`pred-culture-data-simple.csv`).
 
-- `outputs`: contains all output files, including figures and tables for the main text, supplementary text, additional visualizations, and model fits.
-  - just as for code files, each output is marked as a figure (`fig`) or a table (`table`) preceding the corresponding number. The code generating the figure can be found with the corresponding name in the code file. 
+- `outputs`: contains all output files, including figures and tables, supplementary text, additional visualizations, and model fits.
+  - just as for code files, each output is marked as a figure (`fig`) or a table (`table`) preceding the corresponding number. In many cases, the code generating the figure/table can be found with the corresponding name in the code file. However, in some cases, these elements were generated during the series of main analyses, in which case they can be found in files `01-` through `09-`.
   - `outputs/fits`: contains model fits for the best and simplest models, including those generated for informative and non-informative priors and any other relevant analyses.
 
-Any file marked with a preceding `EA-` indicates **E**xtra **A**nalyses, which are not presented formally as display elements in the article but are mentioned in passing. This convention holds for extra code, figures, and table files. 
+Any file marked with a preceding `EA-` indicates **E**xtra **A**nalyses, which are not presented formally as display elements in the article. This convention holds for extra code, figures, and table files. 
 
-## Further database information
-
-`tbl-database-summary.csv` includes additional information relevant for each article, including whether data was digitized, etc.
 
 ## Installing software dependencies
 
@@ -55,3 +54,5 @@ To run our analyses, you will need to install certain software, described below.
   2. run the example models to confirm performance is as expected before proceeding. 
 
 - We also use various other R packages. Each code file contains prompts to download and attach any required external packages. 
+
+
